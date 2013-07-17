@@ -32,6 +32,7 @@ stylesheets:
     - public/stylesheets/DV/components/ui.css
     - public/stylesheets/DV/components/*.css
     - public/stylesheets/DV/themes/plain.css
+    - public/stylesheets/DV/themes/mobile.css
 
   print:
     - public/stylesheets/DV/print.css
