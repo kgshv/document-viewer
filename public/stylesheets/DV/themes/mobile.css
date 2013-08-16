@@ -1,3 +1,5 @@
+/*Main page*/
+
 #nav {
 	z-index: -2;
 	position: absolute;
@@ -5,32 +7,62 @@
 	
 }
 
-
 @media only screen and (max-width: 800px) {
+
+/* Bottom part of the page */
 
 .DV-collapsibleControls {
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
+	height: 50px;
 	border-top: 1px solid #777777;
-   background: url(../../../images/DV/embed/headerbg.png);
+   background: url(../../../images/DV/embed/headerbgwide.png);
 }
 
 .DV-zoomControls {
-	margin: 7px auto 0 15%;
+	margin: 10px 0 0 12%;
+	width: 38%;
 	float: left;
 }
 
-.DV-views div span {
-	font-size: 14px;
+.DV-narrowControls .DV-zoomControls {
+	margin-right: 0;
 }
 
 .DV-docViewer .DV-searchBox {
-	margin: 6px 15% 0 0;
+	margin: 10px 12% 0 0;
+	width: 30%;
+	float: right;
 }
 
 .DV-docViewer .DV-searchInput {
-	width: 75%;
+	float: right;
+	width: 50%;
+}
+
+/* Top part of the page */
+
+.DV-docViewer-Container {
+	top: 50px;
+}
+
+.DV-controls {
+	height: 50px;
+   background: url(../../../images/DV/embed/headerbgwide.png);
+}
+
+.DV-views div span {
+	font-size: 12px;
+		border: none;
+		border-right: 1px solid #777;
+}
+
+.DV-views .DV-last span, .DV-views .DV-first span {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
 }
 
 .DV-zoomLabel {
@@ -42,36 +74,33 @@
 	margin: 0;
 }
 
+/* .DV-documentView, .DV-first, .DV-thumbnailsView, .DV-annotationView, .DV-textView {width: 25%} */
+
+.DV-documentView, .DV-first {
+	width: 40%;
+}
+
+.DV-thumbnailsView, .DV-annotationView, .DV-textView {
+	width: 20%;
+}
+
 .DV-views div {
-	width: 25%;
 	text-align: center;
+	margin: 0;
 }
 
-.DV-controls-bottom {
-
-width: 100%;
-
-border-bottom: 1px solid #aaa;
-border-top: 1px solid #aaa;
-
-margin-top: 0;
-text-shadow: 0 1px 0 #ddd;
-color: #000;
-
-
-background: url("data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAlCAYAAACDKIOpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpiuHv37nemjx8/cjAxAAGE+P//P5RAcMGsf//+QblgFppihASaAWhiCC5OQ9F0YBI/AAIMAImPWEFTMQEnAAAAAElFTkSuQmCC");
-
-position: absolute;
-z-index: 11001;
-bottom: -1px;
-height: 37px;
+.DV-views div span {
+   background: url(../../../images/DV/embed/tabbgwide.png);
+	padding: 17px 0 21px 0;
 }
 
-.DV-controls-bottom h2 {
-		margin: 5px 0 0 5px;
-		padding: 0;
+.DV-viewDocument .DV-views .DV-documentView span,
+.DV-viewThumbnails .DV-views .DV-thumbnailsView span,
+.DV-viewAnnotations .DV-views .DV-annotationView span,
+.DV-viewText .DV-views .DV-textView span,
+.DV-viewSearch .DV-views .DV-textView span {
+	background-position: 0 -60px;
 }
-
 
 .DV-pages { right:0; }
 
@@ -79,42 +108,76 @@ height: 37px;
 
 #nav {
 	float: right;
-	border: none;
-	top: 48px;
-	right:-2px;
-	z-index: 11002;
+	border-bottom: solid 1px #777;
+	border-left: solid 1px #777;
+	top: 50px;
+	right:0;
+	z-index: 22000;
 
-	-webkit-border-radius: 8px 0px 0px 8px;
-	-moz-border-radius: 8px 0px 0px 8px;
-	-o-border-radius: 8px 0px 0px 8px;
-	border-radius: 8px 0px 0px 8px;
-			-webkit-box-shadow: 0px 1px 2px #C2C2C2;
-			-moz-box-shadow:    0px 1px 2px #C2C2C2;
-			-o-box-shadow:    0px 1px 2px #C2C2C2;
-			box-shadow:         0px 1px 2px #C2C2C2; 
+	-webkit-border-radius: 0px 0px 0px 10px;
+	-moz-border-radius: 0px 0px 0px 10px;
+	-o-border-radius: 0px 0px 0px 10px;
+	border-radius: 0px 0px 0px 10px;
+			-webkit-box-shadow:	inset -3px 5px 8px -5px;
+			-moz-box-shadow:		inset -3px 5px 8px -5px;
+			-o-box-shadow:			inset -3px 5px 8px -5px;
+			box-shadow:				inset -3px 5px 8px -5px; 
 
-	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
-	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
-	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%); 
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #F0F0F0));
-	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F0F0F0 100%);
-	background-image: linear-gradient(to bottom, #FFFFFF 0%, #F0F0F0 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%); 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EEEEEE));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%);
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
 }
 
 #nav ul {
 	margin: 13px 0 0 0;
 	padding: 0 0 32px 18px;
+	cursor: pointer;
 }
 
 #nav li {
 	list-style: none;
 	float: left;
-	margin-right: 14px;
+	margin-right: 10px;
 }
-
-#nav li a:link, a:active, a:visited {
+.DV-docViewer span {
+	font:  14px bold;
 	color: #000;
-	font: Arial, Helvetica, sans-serif 16px bold;
+	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+}
+
+/*Text Page*/
+
+@media only screen and (max-width: 400px) {
+
+.DV-textCurrentPage{
+	position: absolute;
+	left: -1000px;
+}
+.DV-pageCollection {
+	margin: 0;
+}
+.DV-textContents {
+	margin: 20px;
+}
+.DV-autoZoom .DV-textPage {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/*The thing below would solve a lot of problems, but unfortunately the .DV-pageCollection style is defined by the script after all the stylesheets are loaded*/
+/*
+.DV-pageCollection {
+	width: 100%;
+}
+*/
+
+
+
+/*DO NOT DELETE THIS BRACKET*/}/*DO NOT DELETE THIS BRACKET*/
