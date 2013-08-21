@@ -22,4 +22,45 @@ function DV_Mobile(){
 		document.getElementById('nav').style.right = "266px";
 	DV_mobile_menu_hide = 1;
 }
-}
+};
+
+window.onload = function DV_pinch(){
+
+	var body = document.getElementById('mzoom');
+	var check = 0;
+	var hammertime = Hammer(body, {
+			prevent_default: true,
+			drag: true,
+			swipe: true,
+			tap: true,
+			hold: true  
+    });
+
+  	hammertime.on("pinchin", function(event) {	
+      var currentZoom = DV.viewers[_.keys(DV.viewers)[0]].models.document.zoomLevel;
+		var actionState = event.gesture.scale;
+		if (check === 1) {
+			return;
+			}
+  		if (actionState <= 0.4) {
+			DV.viewers[_.keys(DV.viewers)[0]].events.zoom(currentZoom - 300);
+			check = 1;
+  		}
+    });
+
+   hammertime.on("pinchout", function(event) {
+      var currentZoom = DV.viewers[_.keys(DV.viewers)[0]].models.document.zoomLevel;
+		var actionState = event.gesture.scale;
+		if (check === 1) {
+			return;
+			}
+  		if (actionState >= 2) {
+			DV.viewers[_.keys(DV.viewers)[0]].events.zoom(currentZoom + 300);
+			check = 1;
+  		}
+    });
+    
+   hammertime.on("release", function(event) {
+   	check = 0;
+   });
+};

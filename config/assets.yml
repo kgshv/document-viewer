@@ -9,6 +9,7 @@ javascripts:
     - public/javascripts/DV/vendor/underscore.js
     - public/javascripts/DV/vendor/jquery.acceptInput.js
     - public/javascripts/DV/vendor/jquery.placeholder.js
+    - public/javascripts/DV/vendor/hammer.js
     - public/javascripts/DV/lib/initializer.js
     - public/javascripts/DV/lib/*.js
     - public/javascripts/DV/schema/*.js
@@ -31,8 +32,7 @@ stylesheets:
     - public/stylesheets/DV/components/structure.css
     - public/stylesheets/DV/components/ui.css
     - public/stylesheets/DV/components/*.css
-    - public/stylesheets/DV/themes/plain.css
-    - public/stylesheets/DV/themes/mobile.css
+    - public/stylesheets/DV/themes/*.css
 
   print:
     - public/stylesheets/DV/print.css

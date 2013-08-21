@@ -4,7 +4,6 @@
 	z-index: -2;
 	position: absolute;
 	right: -9999px;
-	
 }
 
 @media only screen and (max-width: 800px) {
@@ -13,7 +12,7 @@
 
 .DV-collapsibleControls {
 	position: fixed;
-	bottom: 0px;
+	bottom: -3px;
 	width: 100%;
 	height: 50px;
 	border-top: 1px solid #777777;
@@ -21,9 +20,8 @@
 }
 
 .DV-zoomControls {
-	margin: 10px 0 0 12%;
-	width: 38%;
-	float: left;
+	position: absolute;
+	display: none;
 }
 
 .DV-narrowControls .DV-zoomControls {
@@ -31,14 +29,15 @@
 }
 
 .DV-docViewer .DV-searchBox {
-	margin: 10px 12% 0 0;
-	width: 30%;
-	float: right;
+	margin: 10px auto 0 auto;
+	width: 100%;
 }
 
 .DV-docViewer .DV-searchInput {
-	float: right;
-	width: 50%;
+	width: 100px;
+	height: 15px;
+	float: none;
+	margin: 0 auto;
 }
 
 /* Top part of the page */
