@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+gem "json"
+gem "sinatra", :require => "sinatra/base"
+gem "padrino-helpers"
+gem "jammit-sinatra"
+gem "sinatra"
+gem "thin"
